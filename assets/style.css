@@ -1,0 +1,63 @@
+/* Chance Content Services — grants guides
+   Editorial paper system: warm paper, deep ink, one brass accent.
+   Display: Fraunces (serif, characterful). Body: Public Sans. Mono: IBM Plex Mono for figures. */
+:root{
+  --paper:#faf6ee; --paper-2:#f3ecdd; --ink:#1d2430; --ink-soft:#4a5261;
+  --brass:#a86e14; --brass-soft:#c99a3f; --line:#ddd2ba; --card:#fffdf8;
+  --green:#20513c;
+  --serif:"Fraunces", Georgia, serif; --sans:"Public Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.4rem}
+a{color:var(--green)}
+.kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 .9rem}
+h1,h2,h3{font-family:var(--serif);font-weight:560;line-height:1.12;margin:0}
+h1{font-size:clamp(2.3rem,5.2vw,3.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+h3{font-size:1.25rem}
+.lede{font-size:1.16rem;color:var(--ink-soft);max-width:38rem}
+header.site{border-bottom:1px solid var(--line);background:var(--paper)}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}
+.brand{font-family:var(--serif);font-size:1.15rem;font-weight:640;color:var(--ink);text-decoration:none}
+.brand span{color:var(--brass)}
+header.site nav a{color:var(--ink-soft);text-decoration:none;font-size:.95rem;margin-left:1.4rem}
+header.site nav a:hover{color:var(--ink)}
+.hero{padding:4.2rem 0 3rem;border-bottom:1px solid var(--line);
+  background:radial-gradient(60rem 22rem at 85% -6rem, #f0e3c2 0%, transparent 60%), var(--paper)}
+.hero .rule{width:3.4rem;height:3px;background:var(--brass);margin:1.4rem 0}
+.cta-row{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.8rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1rem;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--green);border-color:var(--green)}
+.btn.ghost{color:var(--ink);background:transparent}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass)}
+section{padding:3.2rem 0}
+.guides{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-top:1.8rem}
+.guide{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.5rem 1.3rem;text-decoration:none;color:var(--ink);display:block;transition:transform .25s ease, box-shadow .25s ease}
+.guide:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(29,36,48,.35)}
+.guide .g-k{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.guide h3{margin:.5rem 0 .4rem}
+.guide p{margin:0;color:var(--ink-soft);font-size:.97rem}
+.guide .g-go{margin-top:.9rem;font-weight:600;color:var(--green);font-size:.95rem}
+.funder{border-top:2px solid var(--ink);padding:1.6rem 0 1.2rem}
+.funder h3{font-size:1.45rem}
+.funder .f-meta{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);margin:.4rem 0 .8rem;letter-spacing:.02em}
+.funder p{max-width:44rem}
+.proof{background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--brass);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0}
+.proof .p-k{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 .5rem}
+.proof p{margin:.2rem 0}
+.proof .p-amt{font-family:var(--serif);font-size:1.5rem}
+.offer{background:var(--ink);color:var(--paper);border-radius:18px;padding:2.4rem;margin:2.6rem 0}
+.offer h2{color:var(--paper)}
+.offer p{color:#cfd4dc;max-width:42rem}
+.offer .btn.primary{background:var(--brass);border-color:var(--brass);color:#fff}
+.offer .btn.primary:hover{background:var(--brass-soft)}
+.offer .o-price{font-family:var(--mono);color:var(--brass-soft);letter-spacing:.06em}
+.checked{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft)}
+footer.site{border-top:1px solid var(--line);padding:2.2rem 0 3rem;color:var(--ink-soft);font-size:.94rem}
+footer.site .brand{font-size:1rem}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
+.reveal.shown{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none} html{scroll-behavior:auto}}
